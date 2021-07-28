@@ -8,6 +8,7 @@ import SlideBar from '../components/SlideBar'
 Vue.use(VueRouter)
 
 export default new VueRouter({
+    mode: 'hash',
     routes: [
         {
             name: 'root',
