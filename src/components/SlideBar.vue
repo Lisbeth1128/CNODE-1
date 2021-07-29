@@ -59,7 +59,8 @@ export default {
     getSlideBarData() {
       this.$http
         .get(
-          `http://mock.hunger-valley.com/cnode/api/v1/user/${this.$route.params.name}`
+          //`http://mock.hunger-valley.com/cnode/api/v1/user/${this.$route.params.name}`
+          `https://cnodejs.org/api/v1/user/${this.$route.params.name}`
         )
         .then((res) => {
           /* 加载成功，去除动画 */

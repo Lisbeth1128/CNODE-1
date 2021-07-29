@@ -23,7 +23,7 @@
       <div class="top-bar">回复</div>
       <div
         v-for="(reply, index) in post.replies"
-        :key="reply.author.avatar_url"
+        :key="reply.author.id"
         class="reply-sec">
         <div class="reply-up">
           <router-link :to="{
@@ -62,7 +62,8 @@ export default {
     getArticleData() {
       this.$http
         .get(
-          `http://mock.hunger-valley.com/cnode/api/v1/topic/${this.$route.params.id}`
+          //`http://mock.hunger-valley.com/cnode/api/v1/topic/${this.$route.params.id}`
+          `https://cnodejs.org/api/v1/topic/${this.$route.params.id}`
         )
         .then((res) => {
           if (res.data.success === true) {

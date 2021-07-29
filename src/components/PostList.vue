@@ -16,7 +16,7 @@
                       <span>招聘</span>
                   </div>    
               </li>
-              <li v-for="post in sortedArray" :key="post.author.avatar_url">
+              <li v-for="post in sortedArray" :key="post.author.id">
                   <!-- 头像 -->
                   <img :src="post.author.avatar_url" alt="">
                   <!-- 回复/浏览 -->
@@ -73,7 +73,9 @@ export default {
     },
     methods: {
         getData(){
-            this.$http.get('http://mock.hunger-valley.com/cnode/api/v1/topics', {
+            this.$http.get(
+                //'http://mock.hunger-valley.com/cnode/api/v1/topics'
+                'https://cnodejs.org/api/v1/topics', {
                 params: {
                     page: this.postpage,
                     limit: 20
