@@ -15,7 +15,7 @@
             <span>来自 {{ post | formatTab }}</span>
           </div>
         </div>
-        <div class="inner-topic">
+        <div class="inner-topic markdown-body">
           <div v-html="post.content" class="topic-content"></div>
         </div>
       </div>
@@ -89,7 +89,8 @@ export default {
 </script>
 
 <style>
-/* @import url('../assets/markdown-github.css'); */
+@import url('../assets/github-markdown.css');
+
 .article {
   margin-right: 305px;
 }
