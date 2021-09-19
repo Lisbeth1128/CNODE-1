@@ -91,6 +91,11 @@ export default {
 <style>
 @import url('../assets/github-markdown.css');
 
+.loading > img {
+  width: 100%;
+  height: 100%;
+}
+
 .article {
   margin-right: 305px;
 }
