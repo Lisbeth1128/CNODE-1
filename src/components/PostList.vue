@@ -36,7 +36,7 @@
                   <router-link :to="{name: 'post_content', params:{id: post.id, name:post.author.loginname}}">
                       <span class="posts-title">
                       {{post.title}}
-                  </span>
+                      </span>
                   </router-link>
                   <!-- 最终回复时间 -->
                   <span class="last-reply pull-right">{{post.last_reply_at | formatDate}}</span>
@@ -129,6 +129,7 @@ img {
     font-size: 14px;
 }
 
+
 .posts > ul > li:not(:first-child) {
     list-style: none;
     padding: 9px;
@@ -177,6 +178,12 @@ img {
 .posts-title {
     color: #333;
     font-size: 16px;
+    max-width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    text-overflow: ellipsis;
 }
 
 .pull-right {
